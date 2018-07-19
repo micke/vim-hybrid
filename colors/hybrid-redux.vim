@@ -47,7 +47,7 @@ if !exists('g:hybrid_inverse')
   let g:hybrid_inverse=1
 endif
 
-if !exists('g:hybrid_guisp_fallback') || index(['fg', 'bg'], g:gruvbox_guisp_fallback) == -1
+if !exists('g:hybrid_guisp_fallback') || index(['fg', 'bg'], g:hybrid_guisp_fallback) == -1
   let g:hybrid_guisp_fallback='NONE'
 endif
 
@@ -68,7 +68,7 @@ if !exists('g:hybrid_invert_indent_guides')
 endif
 
 if exists('g:hybrid_contrast')
-  echo 'g:hybrid_contrast is deprecated; use g:gruvbox_contrast_light and g:gruvbox_contrast_dark instead'
+  echo 'g:hybrid_contrast is deprecated; use g:hybrid_contrast_light and g:hybrid_contrast_dark instead'
 endif
 
 if !exists('g:hybrid_contrast_dark')
