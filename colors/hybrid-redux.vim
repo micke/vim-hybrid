@@ -63,10 +63,6 @@ if !exists('g:hybrid_termcolors')
   let g:hybrid_termcolors=256
 endif
 
-if !exists('g:hybrid_invert_indent_guides')
-  let g:hybrid_invert_indent_guides=0
-endif
-
 if exists('g:hybrid_contrast')
   echo 'g:hybrid_contrast is deprecated; use g:hybrid_contrast_light and g:hybrid_contrast_dark instead'
 endif
@@ -88,50 +84,50 @@ let s:is_dark=(&background == 'dark')
 let s:gb = {}
 
 " fill it with absolute colors
-let s:gb.dark0_hard  = ['#1d1f21', 234]     " 29-32-33
-let s:gb.dark0       = ['#1d1f21', 234]     " 40-40-40
-let s:gb.dark0_soft  = ['#1d1f21', 234]     " 50-48-47
-let s:gb.dark1       = ['#c5c8c6', 235]     " 60-56-54
-let s:gb.dark2       = ['#504945', 239]     " 80-73-69
-let s:gb.dark3       = ['#282a2e', 237]     " 102-92-84
-let s:gb.dark4       = ['#c5c8c6', 250]     " 124-111-100
-let s:gb.dark4_256   = ['#7c6f64', 243]     " 124-111-100
+let s:gb.dark0_hard  = ['#1d1f21', 234]
+let s:gb.dark0       = ['#1d1f21', 234]
+let s:gb.dark0_soft  = ['#1d1f21', 234]
+let s:gb.dark1       = ['#282a2e', 235]
+let s:gb.dark2       = ['#585c63', 239]
+let s:gb.dark3       = ['#707880', 237]
+let s:gb.dark4       = ['#c5c8c6', 250]
+let s:gb.dark4_256   = ['#7c6f64', 243]
 
-let s:gb.gray_245    = ['#707880', 245]     " 146-131-116
-let s:gb.gray_244    = ['#707880', 244]     " 146-131-116
+let s:gb.gray_245    = ['#707880', 245]
+let s:gb.gray_244    = ['#707880', 244]
 
-let s:gb.light0_hard = ['#585c63', 250]     " 249-245-215
-let s:gb.light0      = ['#585c63', 250]     " 253-244-193
-let s:gb.light0_soft = ['#585c63', 250]     " 242-229-188
-let s:gb.light1      = ['#c5c8c6', 223]     " 235-219-178
-let s:gb.light2      = ['#d5c4a1', 250]     " 213-196-161
-let s:gb.light3      = ['#bdae93', 248]     " 189-174-147
-let s:gb.light4      = ['#a89984', 246]     " 168-153-132
-let s:gb.light4_256  = ['#a89984', 246]     " 168-153-132
+let s:gb.light0_hard = ['#585c63', 250]
+let s:gb.light0      = ['#585c63', 250]
+let s:gb.light0_soft = ['#585c63', 250]
+let s:gb.light1      = ['#c5c8c6', 223]
+let s:gb.light2      = ['#9e9e9e', 250]
+let s:gb.light3      = ['#808080', 248]
+let s:gb.light4      = ['#425059', 246]
+let s:gb.light4_256  = ['#425059', 246]
 
-let s:gb.bright_red     = ['#cc6666', 167]     " 251-73-52
-let s:gb.bright_green   = ['#b5bd68', 142]     " 184-187-38
-let s:gb.bright_yellow  = ['#f0c674', 214]     " 250-189-47
-let s:gb.bright_blue    = ['#81a2be', 109]     " 131-165-152
-let s:gb.bright_purple  = ['#b294bb', 175]     " 211-134-155
-let s:gb.bright_aqua    = ['#8abeb7', 108]     " 142-192-124
-let s:gb.bright_orange  = ['#de935f', 208]     " 254-128-25
+let s:gb.bright_red     = ['#cc6666', 167]
+let s:gb.bright_green   = ['#b5bd68', 142]
+let s:gb.bright_yellow  = ['#f0c674', 214]
+let s:gb.bright_blue    = ['#81a2be', 109]
+let s:gb.bright_purple  = ['#b294bb', 175]
+let s:gb.bright_aqua    = ['#8abeb7', 108]
+let s:gb.bright_orange  = ['#de935f', 208]
 
-let s:gb.neutral_red    = ['#cc6666', 124]     " 204-36-29
-let s:gb.neutral_green  = ['#b5bd68', 106]     " 152-151-26
-let s:gb.neutral_yellow = ['#f0c674', 172]     " 215-153-33
-let s:gb.neutral_blue   = ['#81a2be', 66]      " 69-133-136
-let s:gb.neutral_purple = ['#b294bb', 132]     " 177-98-134
-let s:gb.neutral_aqua   = ['#8abeb7', 72]      " 104-157-106
-let s:gb.neutral_orange = ['#de935f', 166]     " 214-93-14
+let s:gb.neutral_red    = ['#cc6666', 124]
+let s:gb.neutral_green  = ['#b5bd68', 106]
+let s:gb.neutral_yellow = ['#f0c674', 172]
+let s:gb.neutral_blue   = ['#81a2be', 66] 
+let s:gb.neutral_purple = ['#b294bb', 132]
+let s:gb.neutral_aqua   = ['#8abeb7', 72] 
+let s:gb.neutral_orange = ['#de935f', 166]
 
-let s:gb.faded_red      = ['#cc6666', 88]      " 157-0-6
-let s:gb.faded_green    = ['#b5bd68', 100]     " 121-116-14
-let s:gb.faded_yellow   = ['#f0c674', 136]     " 181-118-20
-let s:gb.faded_blue     = ['#81a2be', 24]      " 7-102-120
-let s:gb.faded_purple   = ['#b294bb', 96]      " 143-63-113
-let s:gb.faded_aqua     = ['#8abeb7', 66]      " 66-123-88
-let s:gb.faded_orange   = ['#de935f', 130]     " 175-58-3
+let s:gb.faded_red      = ['#5f0000', 88] 
+let s:gb.faded_green    = ['#005f00', 100]
+let s:gb.faded_yellow   = ['#5f5f00', 136]
+let s:gb.faded_blue     = ['#00005f', 24] 
+let s:gb.faded_purple   = ['#5f005f', 96] 
+let s:gb.faded_aqua     = ['#005f5f', 66] 
+let s:gb.faded_orange   = ['#875f00', 130]
 
 " }}}
 " Setup Emphasis: {{{
@@ -312,7 +308,7 @@ if exists('g:hybrid_number_column')
   let s:number_column = get(s:gb, g:hybrid_number_column)
 endif
 
-let s:sign_column = s:bg1
+let s:sign_column = s:bg0
 
 if exists('g:gitgutter_override_sign_column_highlight') &&
       \ g:gitgutter_override_sign_column_highlight == 1
@@ -517,7 +513,7 @@ call s:HL('StatusLine',   s:bg2, s:fg1, s:inverse)
 call s:HL('StatusLineNC', s:bg1, s:fg4, s:inverse)
 
 " The column separating vertically split windows
-call s:HL('VertSplit', s:bg3, s:vert_split)
+call s:HL('VertSplit', s:bg1, s:vert_split)
 
 " Current match in wildmenu completion
 call s:HL('WildMenu', s:blue, s:bg2, s:bold)
@@ -543,7 +539,7 @@ hi! link WarningMsg HybridRedBold
 " Gutter: {{{
 
 " Line number for :number and :# commands
-call s:HL('LineNr', s:bg4, s:number_column)
+call s:HL('LineNr', s:bg2, s:number_column)
 
 " Column where signs are displayed
 call s:HL('SignColumn', s:none, s:sign_column)
@@ -701,13 +697,8 @@ if !exists('g:indent_guides_auto_colors')
 endif
 
 if g:indent_guides_auto_colors == 0
-  if g:hybrid_invert_indent_guides == 0
-    call s:HL('IndentGuidesOdd', s:vim_bg, s:bg2)
-    call s:HL('IndentGuidesEven', s:vim_bg, s:bg1)
-  else
-    call s:HL('IndentGuidesOdd', s:vim_bg, s:bg2, s:inverse)
-    call s:HL('IndentGuidesEven', s:vim_bg, s:bg3, s:inverse)
-  endif
+  call s:HL('IndentGuidesOdd', s:vim_bg, s:bg1)
+  call s:HL('IndentGuidesEven', s:vim_bg, s:bg0)
 endif
 
 " }}}
