@@ -575,9 +575,9 @@ call s:HL('Todo', s:vim_fg, s:vim_bg, s:bold . s:italic)
 call s:HL('Error', s:red, s:vim_bg, s:bold . s:inverse)
 
 " Generic statement
-hi! link Statement HybridRed
+hi! link Statement HybridBlue
 " if, then, else, endif, swicth, etc.
-hi! link Conditional HybridRed
+hi! link Conditional HybridBlue
 " for, do, while, etc.
 hi! link Repeat HybridRed
 " case, default, etc.
@@ -590,9 +590,9 @@ hi! link Operator Normal
 hi! link Keyword HybridRed
 
 " Variable name
-hi! link Identifier HybridBlue
+hi! link Identifier HybridPurple
 " Function name
-hi! link Function HybridGreenBold
+hi! link Function HybridYellowBold
 
 " Generic preprocessor
 hi! link PreProc HybridAqua
@@ -606,7 +606,7 @@ hi! link Macro HybridAqua
 hi! link PreCondit HybridAqua
 
 " Generic constant
-hi! link Constant HybridPurple
+hi! link Constant HybridRed
 " Character constant: 'c', '/n'
 hi! link Character HybridPurple
 " String constant: "this is a string"
@@ -618,12 +618,12 @@ endif
 " Boolean constant: TRUE, false
 hi! link Boolean HybridPurple
 " Number constant: 234, 0xff
-hi! link Number HybridPurple
+hi! link Number HybridYellow
 " Floating point constant: 2.3e10
 hi! link Float HybridPurple
 
 " Generic type
-hi! link Type HybridYellow
+hi! link Type HybridOrange
 " static, register, volatile, etc
 hi! link StorageClass HybridOrange
 " struct, union, enum, etc.
