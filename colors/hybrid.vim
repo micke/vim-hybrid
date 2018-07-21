@@ -105,6 +105,10 @@ let s:gb.light3      = ['#808080', 248]
 let s:gb.light4      = ['#425059', 246]
 let s:gb.light4_256  = ['#425059', 246]
 
+let s:gb.add         = ['#5F875F', 0]
+let s:gb.change      = ['#5F5F87', 0]
+let s:gb.del         = ['#cc6666', 0]
+
 let s:gb.bright_red     = ['#cc6666', 167]
 let s:gb.bright_green   = ['#b5bd68', 142]
 let s:gb.bright_yellow  = ['#f0c674', 214]
@@ -178,6 +182,10 @@ if s:is_dark
   let s:bg3  = s:gb.dark3
   let s:bg4  = s:gb.dark4
 
+  let s:addbg  = s:gb.add
+  let s:changebg  = s:gb.change
+  let s:delbg  = s:gb.del
+
   let s:gray = s:gb.gray_245
 
   let s:fg0 = s:gb.light0
@@ -185,6 +193,9 @@ if s:is_dark
   let s:fg2 = s:gb.light2
   let s:fg3 = s:gb.light3
   let s:fg4 = s:gb.light4
+
+  let s:addfg = ['#d7ffaf', 0]
+  let s:changefg = ['#d7d7ff', 0]
 
   let s:fg4_256 = s:gb.light4_256
 
@@ -255,6 +266,9 @@ let s:gb.fg1 = s:fg1
 let s:gb.fg2 = s:fg2
 let s:gb.fg3 = s:fg3
 let s:gb.fg4 = s:fg4
+
+let s:gb.addfg = s:addfg
+let s:gb.changefg = s:changefg
 
 let s:gb.fg4_256 = s:fg4_256
 
@@ -424,12 +438,16 @@ call s:HL('HybridFg1', s:fg1)
 call s:HL('HybridFg2', s:fg2)
 call s:HL('HybridFg3', s:fg3)
 call s:HL('HybridFg4', s:fg4)
+call s:HL('HybridAddFg', s:addfg)
+call s:HL('HybridChangeFg', s:changefg)
 call s:HL('HybridGray', s:gray)
 call s:HL('HybridBg0', s:bg0)
 call s:HL('HybridBg1', s:bg1)
 call s:HL('HybridBg2', s:bg2)
 call s:HL('HybridBg3', s:bg3)
 call s:HL('HybridBg4', s:bg4)
+call s:HL('HybridAddBg', s:addbg)
+call s:HL('HybridChangeBg', s:changebg)
 
 call s:HL('HybridRed', s:red)
 call s:HL('HybridRedBold', s:red, s:none, s:bold)
@@ -484,7 +502,7 @@ if version >= 700
   hi! link TabLine TabLineFill
 
   " Match paired bracket under the cursor
-  call s:HL('MatchParen', s:none, s:bg3, s:bold)
+  call s:HL('MatchParen', s:none, s:none, s:inverse)
 endif
 
 if version >= 703
@@ -585,7 +603,7 @@ hi! link Label HybridRed
 " try, catch, throw
 hi! link Exception HybridRed
 " sizeof, "+", "*", etc.
-hi! link Operator Normal
+call s:HL('Operator', s:fg1, s:none)
 " Any other keyword
 hi! link Keyword HybridRed
 
@@ -648,13 +666,13 @@ endif
 " }}}
 " Diffs: {{{
 
-call s:HL('DiffDelete', s:red, s:bg0, s:inverse)
-call s:HL('DiffAdd',    s:green, s:bg0, s:inverse)
+call s:HL('DiffDelete', s:fg1, s:delbg)
+call s:HL('DiffAdd',    s:addfg, s:addbg)
 "call s:HL('DiffChange', s:bg0, s:blue)
 "call s:HL('DiffText',   s:bg0, s:yellow)
 
 " Alternative setting
-call s:HL('DiffChange', s:aqua, s:bg0, s:inverse)
+call s:HL('DiffChange', s:changefg, s:changebg, s:inverse)
 call s:HL('DiffText',   s:yellow, s:bg0, s:inverse)
 
 " }}}
