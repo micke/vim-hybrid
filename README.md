@@ -1,5 +1,5 @@
 
-<p align="center"><img src="http://svgur.com/i/3Dp.svg"></p>
+<p align="center"><img src="https://i.imgur.com/WaBa1b1.png"></p>
 
 hybrid is a modernization of the work done by [w0ng][]. VIMscript based on [gruvbox][].
 
