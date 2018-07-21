@@ -1,49 +1,17 @@
+
 <p align="center"><img src="http://svgur.com/i/3Dp.svg"></p>
 
-gruvbox is heavily inspired by [badwolf][], [jellybeans][] and [solarized][].
+hybrid is a modernization of the work done by [w0ng][]. VIMscript based on [gruvbox][].
 
-Designed as a bright theme with pastel 'retro groove' colors and light/dark mode switching in the way of [solarized][]. The main focus when developing gruvbox is to keep colors easily distinguishable, contrast enough and still pleasant for the eyes.
+Designed as a dark theme.
 
-   [badwolf]: https://github.com/sjl/badwolf
-   [jellybeans]: https://github.com/nanotech/jellybeans.vim
-   [solarized]: http://ethanschoonover.com/solarized
+   [w0ng]: https://github.com/w0ng/vim-hybrid
+   [gruvbox]: https://github.com/morhetz/gruvbox
 
 Attention
 ---------
 
-1. [Read this first](https://github.com/morhetz/gruvbox/wiki/Terminal-specific)
-2. Typeface from gallery is [Fantasque Sans Mono](https://github.com/belluzj/fantasque-sans)
-3. Typeface from screenshots below is [Fira Mono](http://www.carrois.com/fira-4-1/)
-
-Screenshots
------------
-
-Refer [Gallery][] for more syntax-specific screenshots.
-
-   [Gallery]: https://github.com/morhetz/gruvbox/wiki/Gallery
-
-### Dark mode
-
-![Screenshot Dark](http://i.imgur.com/GkIl8Fn.png)
-
-### Light mode
-
-![Screenshot Light](http://i.imgur.com/X75niEa.png)
-
-### Airline theme
-
-![Screenshot Airline](http://i.imgur.com/wRQceUR.png)
-
-Palette
--------
-
-### Dark mode
-
-![Palette Dark](http://i.imgur.com/wa666xg.png)
-
-### Light mode
-
-![Palette Light](http://i.imgur.com/49qKyYW.png)
+1. Only supports VIM with truecolor eneabled (`set termguicolors`
 
 Contrast options
 ----------------
@@ -53,13 +21,6 @@ Refer [wiki section][] for contrast configuration and other options.
    [wiki section]: https://github.com/morhetz/gruvbox/wiki/Configuration#ggruvbox_contrast_dark
 
 ![Contrast Options](http://i.imgur.com/5MSbe6T.png)
-
-Documentation
--------------
-
-Please check [wiki][] for installation details, terminal-specific setup, troubleshooting, configuration options and others.
-
-   [wiki]: https://github.com/morhetz/gruvbox/wiki
 
 Features
 --------
@@ -86,25 +47,10 @@ Features
    [NERDTree]: https://github.com/scrooloose/nerdtree
    [Dirvish]: https://github.com/justinmk/vim-dirvish
 
-Contributions
--------------
-
-See [gruvbox-contrib][] repo for contributions, ports and extras.
-
-[gruvbox-contrib]: https://github.com/morhetz/gruvbox-contrib
-
 ToDo
 ----
 
-* Filetype syntax highlighting (R, TeX, Swift, Erlang)
-* Plugin support (Tagbar, VimPlug)
-
-Self-Promotion
---------------
-
-If you like gruvbox follow the repository on
-[GitHub](https://github.com/morhetz/gruvbox) and vote for it on
-[vim.org](http://www.vim.org/scripts/script.php?script_id=4349).
+* Better light support
 
 License
 -------
