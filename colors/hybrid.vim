@@ -74,6 +74,9 @@ endif
 if !exists('g:hybrid_contrast_light')
   let g:hybrid_contrast_light='medium'
 endif
+if !exists('g:hybrid_transparent')
+  let g:hybrid_transparent=0
+endif
 
 let s:is_dark=(&background == 'dark')
 
@@ -84,14 +87,15 @@ let s:is_dark=(&background == 'dark')
 let s:gb = {}
 
 " fill it with absolute colors
-let s:gb.dark0_hard  = ['#1d1f21', 234]
-let s:gb.dark0       = ['#1d1f21', 234]
-let s:gb.dark0_soft  = ['#1d1f21', 234]
-let s:gb.dark1       = ['#282a2e', 235]
-let s:gb.dark2       = ['#585c63', 239]
-let s:gb.dark3       = ['#707880', 237]
-let s:gb.dark4       = ['#c5c8c6', 250]
-let s:gb.dark4_256   = ['#7c6f64', 243]
+let s:gb.dark0_hard        = ['#1d1f21',   234]
+let s:gb.dark0             = ['#1d1f21',   234]
+let s:gb.dark0_transparent = ['#1d1f21f2', 234]
+let s:gb.dark0_soft        = ['#1d1f21',   234]
+let s:gb.dark1             = ['#282a2e',   235]
+let s:gb.dark2             = ['#585c63',   239]
+let s:gb.dark3             = ['#707880',   237]
+let s:gb.dark4             = ['#c5c8c6',   250]
+let s:gb.dark4_256         = ['#7c6f64',   243]
 
 let s:gb.gray_245    = ['#707880', 245]
 let s:gb.gray_244    = ['#707880', 244]
@@ -170,7 +174,12 @@ let s:none = ['NONE', 'NONE']
 
 " determine relative colors
 if s:is_dark
-  let s:bg0  = s:gb.dark0
+  if g:hybrid_transparent == 0
+    let s:bg0  = s:gb.dark0
+  else
+    let s:bg0  = s:gb.dark0_transparent
+  end
+
   if g:hybrid_contrast_dark == 'soft'
     let s:bg0  = s:gb.dark0_soft
   elseif g:hybrid_contrast_dark == 'hard'
@@ -1402,3 +1411,4 @@ endfunction
 " }}}
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
+
