@@ -778,6 +778,8 @@ hi! link GitGutterChangeDelete HybridAquaSign
 
 hi! link gitcommitSelectedFile HybridGreen
 hi! link gitcommitDiscardedFile HybridRed
+hi! link gitcommitSummary HybridFg1
+hi! link gitcommitOverflow HybridRed
 
 " }}}
 " Signify: {{{
