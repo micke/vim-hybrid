@@ -361,13 +361,6 @@ if exists('g:hybrid_invert_signs')
   endif
 endif
 
-let s:invert_selection = s:inverse
-if exists('g:hybrid_invert_selection')
-  if g:hybrid_invert_selection == 0
-    let s:invert_selection = ''
-  endif
-endif
-
 let s:invert_tabline = ''
 if exists('g:hybrid_invert_tabline')
   if g:hybrid_invert_tabline == 1
@@ -528,7 +521,7 @@ endif
 hi! link NonText HybridBg2
 hi! link SpecialKey HybridBg2
 
-call s:HL('Visual',    s:none,  s:bg3, s:invert_selection)
+call s:HL('Visual',    s:none,  s:bg2)
 hi! link VisualNOS Visual
 
 call s:HL('Search',    s:yellow, s:bg0, s:inverse)
@@ -778,7 +771,7 @@ hi! link GitGutterChangeDelete HybridAquaSign
 
 hi! link gitcommitSelectedFile HybridGreen
 hi! link gitcommitDiscardedFile HybridRed
-hi! link gitcommitSummary HybridFg1
+hi! link gitcommitSummary HybridBlue
 hi! link gitcommitOverflow HybridRed
 
 " }}}
