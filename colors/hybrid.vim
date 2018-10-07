@@ -504,7 +504,7 @@ if version >= 700
   hi! link TabLine TabLineFill
 
   " Match paired bracket under the cursor
-  call s:HL('MatchParen', s:none, s:none, s:inverse)
+  call s:HL('MatchParen', s:red, s:none, s:bold)
 endif
 
 if version >= 703
@@ -717,8 +717,8 @@ if !exists('g:indent_guides_auto_colors')
 endif
 
 if g:indent_guides_auto_colors == 0
-  call s:HL('IndentGuidesOdd', s:vim_bg, s:bg1)
-  call s:HL('IndentGuidesEven', s:vim_bg, s:bg0)
+  call s:HL('IndentGuidesOdd', s:fg1, s:bg1)
+  call s:HL('IndentGuidesEven', s:fg1, s:bg0)
 endif
 
 " }}}
