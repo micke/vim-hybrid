@@ -1225,7 +1225,7 @@ hi! link purescriptBacktick HybridOrange
 " }}}
 " CoffeeScript: {{{
 
-hi! link coffeeExtendedOp HybridFg3
+hi! link coffeeExtendedOp HybridAquaBold
 hi! link coffeeSpecialOp HybridFg3
 hi! link coffeeCurly HybridOrange
 hi! link coffeeParen HybridFg3
