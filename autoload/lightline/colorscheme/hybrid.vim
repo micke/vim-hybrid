@@ -21,7 +21,7 @@ let s:gray2  = [ '#9e9e9e', 235 ]
 let s:gray3  = [ '#808080', 240 ]
 
 let s:p.normal.left     = [ [ s:bg, s:green, 'bold' ], [ s:gray2, s:gray3 ] ]
-let s:p.normal.middle   = [ [ s:fg, s:gray1 ] ]
+let s:p.normal.middle   = [ [ s:gray1, s:gray2 ] ]
 let s:p.inactive.left   = [ [ s:gray1,  s:bg ], [ s:gray1, s:bg ] ]
 let s:p.inactive.middle = [ [ s:gray1, s:gray2 ] ]
 let s:p.inactive.right  = [ [ s:gray1, s:bg ], [ s:gray1, s:bg ] ]
