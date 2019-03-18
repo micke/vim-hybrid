@@ -2,7 +2,7 @@
 " File: hybrid-redux.vim
 " Description: Hybrid originally created by https://github.com/w0ng. Vimscript
 " from gruvbox: https://github.com/morhetz/gruvbox
-" Author: lisinge <me@mike.gg>
+" Author: micke <hi@micke.me>
 " Source: https://github.com/lisinge/vim-hybrid-redux
 " Based On: https://github.com/w0ng/vim-hybrid and https://github.com/morhetz/gruvbox
 " License: MIT
