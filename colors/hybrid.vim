@@ -905,6 +905,12 @@ call s:HL('multiple_cursors_visual', s:none, s:bg2)
 
 " }}}
 
+" coc-nvim: {{{
+
+call s:HL('CocFloating', s:fg1, s:bg1)
+
+" }}}
+
 " Filetype specific -----------------------------------------------------------
 " Diff: {{{
 
