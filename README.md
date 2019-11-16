@@ -36,6 +36,8 @@ Features
    [Startify]: https://github.com/mhinz/vim-startify
    [NERDTree]: https://github.com/scrooloose/nerdtree
    [Dirvish]: https://github.com/justinmk/vim-dirvish
+   [Coc.nvim]: https://github.com/neoclide/coc.nvim
+   [fzf.vim]: https://github.com/junegunn/fzf.vim
 
 ToDo
 ----
