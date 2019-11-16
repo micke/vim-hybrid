@@ -857,6 +857,11 @@ call s:HL('ALEInfo', s:none, s:none, s:undercurl, s:blue)
 hi! link ALEErrorSign HybridRedSign
 hi! link ALEWarningSign HybridYellowSign
 hi! link ALEInfoSign HybridBlueSign
+hi! link ALEVirtualTextError HybridGray
+hi! link ALEVirtualTextWarning HybridGray
+hi! link ALEVirtualTextInfo HybridGray
+hi! link ALEVirtualTextStyleError ALEVirtualTextError
+hi! link ALEVirtualTextStyleWarning ALEVirtualTextWarning
 
 " }}}
 " Dirvish: {{{
@@ -908,6 +913,61 @@ call s:HL('multiple_cursors_visual', s:none, s:bg2)
 " coc-nvim: {{{
 
 call s:HL('CocFloating', s:fg1, s:bg1)
+
+" }}}
+
+" coc.nvim: {{{
+
+hi! link CocErrorSign ALEErrorSign
+hi! link CocWarningSign ALEWarningSign
+hi! link CocInfoSign ALEInfoSign
+hi! link CocErrorHighlight ALEError
+hi! link CocWarningHighlight ALEWarning
+hi! link CocInfoHighlight ALEInfo
+hi! link CocWarningVirtualText ALEVirtualTextWarning
+hi! link CocErrorVirtualText ALEVirtualTextError
+hi! link CocInfoVirtualText ALEVirtualTextInfo
+hi! link CocHintVirtualText ALEVirtualTextInfo
+hi! link CocCodeLens ALEVirtualTextInfo
+hi! link CocGitAddedSign GitGutterAdd
+hi! link CocGitChangeRemovedSign GitGutterChangeDelete
+hi! link CocGitChangedSign GitGutterChange
+hi! link CocGitRemovedSign GitGutterDelete
+hi! link CocGitTopRemovedSign GitGutterDelete
+hi! link CocExplorerBufferRoot HybridOrange
+hi! link CocExplorerBufferExpandIcon HybridAqua
+hi! link CocExplorerBufferBufnr HybridPurple
+hi! link CocExplorerBufferModified HybridRed
+hi! link CocExplorerBufferBufname HybridGray
+hi! link CocExplorerFileRoot HybridOrange
+hi! link CocExplorerFileExpandIcon HybridAqua
+hi! link CocExplorerFileFullpath HybridAqua
+hi! link CocExplorerFileDirectory HybridGreen
+hi! link CocExplorerFileGitStage HybridPurple
+hi! link CocExplorerFileGitUnstage HybridYellow
+hi! link CocExplorerFileSize HybridBlue
+hi! link CocExplorerTimeAccessed HybridAqua
+hi! link CocExplorerTimeCreated HybridAqua
+hi! link CocExplorerTimeModified HybridAqua
+
+" }}}
+
+" fzf: {{{
+
+let g:fzf_colors = {
+      \ 'fg':      ['fg', 'Normal'],
+      \ 'bg':      ['bg', 'Normal'],
+      \ 'hl':      ['fg', 'HybridGreen'],
+      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+      \ 'hl+':     ['fg', 'HybridAqua'],
+      \ 'info':    ['fg', 'HybridAqua'],
+      \ 'prompt':  ['fg', 'HybridGray'],
+      \ 'pointer': ['fg', 'HybridBlue'],
+      \ 'marker':  ['fg', 'HybridYellow'],
+      \ 'spinner': ['fg', 'HybridYellow'],
+      \ 'header':  ['fg', 'Grey']
+      \ }
 
 " }}}
 
