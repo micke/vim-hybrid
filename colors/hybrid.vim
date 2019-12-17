@@ -766,6 +766,11 @@ hi! link GitGutterChange HybridAquaSign
 hi! link GitGutterDelete HybridRedSign
 hi! link GitGutterChangeDelete HybridAquaSign
 
+hi! link GitGutterAddLineNr HybridGreenSign
+hi! link GitGutterChangeLineNr HybridAquaSign
+hi! link GitGutterDeleteLineNr HybridRedSign
+hi! link GitGutterChangeDeleteLineNr HybridAquaSign
+
 " }}}
 " GitCommit: "{{{
 
@@ -910,14 +915,9 @@ call s:HL('multiple_cursors_visual', s:none, s:bg2)
 
 " }}}
 
-" coc-nvim: {{{
-
-call s:HL('CocFloating', s:fg1, s:bg1)
-
-" }}}
-
 " coc.nvim: {{{
 
+call s:HL('CocFloating', s:fg1, s:bg1)
 hi! link CocErrorSign ALEErrorSign
 hi! link CocWarningSign ALEWarningSign
 hi! link CocInfoSign ALEInfoSign
